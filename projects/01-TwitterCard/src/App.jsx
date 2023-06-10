@@ -1,7 +1,7 @@
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard.jsx'
 
-export function App () {
+export function App() {
     const userNameFormat = (userName) => `@${userName}`;
 
     const users = [
@@ -30,11 +30,11 @@ export function App () {
         <section className='App'>
             {
                 users.map(user => {
-                    const {userName, name, initialIsFollowing} = user;
+                    const { userName, name, initialIsFollowing } = user
                     return (
                         <TwitterFollowCard
                             key={userName}
-                            formatUsername={userNameFormat} 
+                            formatUsername={userNameFormat}
                             userName={userName}
                             initialIsFollowing={initialIsFollowing} >
                             {name}
@@ -42,6 +42,6 @@ export function App () {
                     )
                 })
             }
-       </section>
+        </section>
     )
 }
